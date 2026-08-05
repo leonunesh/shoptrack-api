@@ -1,0 +1,19 @@
+{
+  "name": "shoptrack-api",
+  "version": "1.0.0",
+  "description": "ShopTrack API - Express + MySQL on Render/Aiven",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "db:schema": "node src/db/run-schema.js",
+    "db:seed": "node src/db/run-seed.js",
+    "db:reset": "npm run db:schema && npm run db:seed"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [],
+  "author": "Leonardo",
+  "license": "MIT"
+}
