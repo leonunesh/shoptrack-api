@@ -14,12 +14,11 @@ const config = {
   env: process.env.NODE_ENV || 'development',
   port: Number(process.env.PORT) || 3000,
   db: {
-    host: required('shoptrack-mysql-shoptrack-api.l.aivencloud.com'),
+    host: required('DB_HOST'),
     port: Number(process.env.DB_PORT || 3306),
-    user: required('avnadmin'),
-    password: required('AVNS_zLERZlzcDW6VnmTIr98'),
-    database: required('defaultdb'),
-    // Aiven requires TLS. We want to verify with the project CA when available.
+    user: required('DB_USER'),
+    password: required('DB_PASSWORD'),
+    database: required('DB_NAME'),
     ssl: buildSslConfig(),
   },
 };
